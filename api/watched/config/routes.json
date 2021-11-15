@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/watcheds",
+      "handler": "watched.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/watcheds/count",
+      "handler": "watched.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/watcheds/:id",
+      "handler": "watched.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/watcheds",
+      "handler": "watched.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/watcheds/:id",
+      "handler": "watched.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/watcheds/:id",
+      "handler": "watched.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

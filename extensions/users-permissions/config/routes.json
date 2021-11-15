@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "method": "PUT",
+      "path": "/chooseVideo/:id",
+      "handler": "User.choosevideo",
+      "config": {
+        "policies": [],
+        "description": "Update an existing user",
+        "tag": {
+          "plugin": "users-permissions",
+          "name":"User"
+        }
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/users/me/:id",
+      "handler": "User.me",
+      "config": {
+        "policies": [],
+        "prefix": "",
+        "description": "Retrieve the logged in user information",
+        "tag": {
+          "plugin": "users-permissions",
+          "name": "User",
+          "actionType": "findOne"
+        }
+      }
+    }
+  ]
+}

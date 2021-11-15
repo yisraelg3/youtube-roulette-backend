@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "watcheds",
+  "info": {
+    "name": "Watched",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "times_watched": {
+      "type": "integer"
+    },
+    "category": {
+      "type": "string"
+    },
+    "videoId": {
+      "type": "string"
+    },
+    "userId": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "watcheds"
+    }
+  }
+}

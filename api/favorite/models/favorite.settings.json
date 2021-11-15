@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "favorites",
+  "info": {
+    "name": "favorite",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "videoId": {
+      "type": "string"
+    },
+    "userId": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "favorites"
+    }
+  }
+}
